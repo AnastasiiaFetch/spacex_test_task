@@ -7,6 +7,7 @@ export const NavWrapper = styled.div`
   width: 100%;
   padding: 1rem 4rem;
   margin-bottom: 1rem;
+  z-index: 10;
 
   display: flex;
   justify-content: space-between;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const StyledButton = styled.button<any>`
-  background: ${props => props.bgColor};
+export const StyledButton = styled.button<{ bgcolor: string }>`
+  background: ${props => props.bgcolor};
   cursor: pointer;
   border: 1px solid transparent;
   height: 100%;

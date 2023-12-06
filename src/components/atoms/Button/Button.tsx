@@ -8,7 +8,7 @@ interface ButtonProps {
 
 const Button: React.FC<ButtonProps> = ({ bgColor, children, onClick = () => {} }) => {
   return (
-    <StyledButton bgColor={bgColor} onClick={onClick}>
+    <StyledButton bgcolor={bgColor} onClick={onClick}>
       {children}
     </StyledButton>
   );

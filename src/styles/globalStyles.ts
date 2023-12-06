@@ -19,8 +19,10 @@ body {
 }
 
 section {
-  min-height: fit-content;
-  height: 100vh;
+  height: fit-content;
+  max-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
 }
 
 a {

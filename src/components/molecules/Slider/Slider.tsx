@@ -23,7 +23,7 @@ const Slider = () => {
             const Icon = icon;
             return (
               <Button bgColor="rgba(236, 236, 236, 1)" key={id} onClick={onClick}>
-                <Icon />
+                <Icon size="20" />
               </Button>
             );
           })}

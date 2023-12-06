@@ -43,7 +43,7 @@ const HomePage = () => {
                     return (
                       <Dot
                         key={index}
-                        size="22"
+                        size="24"
                         isActive={isActive}
                         onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
                           e.stopPropagation();

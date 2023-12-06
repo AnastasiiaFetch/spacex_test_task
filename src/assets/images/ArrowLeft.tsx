@@ -18,11 +18,11 @@ const ArrowLeft = forwardRef(
       {...rest}
     >
       <path
-        d="M8.5 1L1.5 8L8.5 15"
+        d="M8.5 1L1.5 8L8.5 16"
         stroke="#200E32"
-        stroke-width="1"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="1"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   )

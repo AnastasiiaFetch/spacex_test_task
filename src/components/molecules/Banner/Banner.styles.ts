@@ -56,7 +56,7 @@ export const BannerNavigation = styled.div<any>`
 
     font-family: 'Lato', sans-serif;
     color: rgba(255, 255, 255, 1);
-    font-weight: 300;
+    font-weight: 400;
     font-size: 2rem;
     line-height: 2.5rem;
     text-align: center;
@@ -77,5 +77,5 @@ export const BannerPagination = styled.div<any>`
 
   gap: 0.25rem;
   bottom: 40%;
-  right: 48%;
+  right: 50%;
 `;

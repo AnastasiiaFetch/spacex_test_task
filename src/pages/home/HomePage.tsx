@@ -11,6 +11,7 @@ import {
 } from '../../components/molecules/Banner/Banner.styles';
 import ArrowDown from '../../assets/images/ArrowDown';
 import Dot from '../../assets/images/Dot';
+import Slider from '../../components/molecules/Slider/Slider';
 
 const HomePage = () => {
   const imgs = [img_01, img_02, img_03];
@@ -56,8 +57,10 @@ const HomePage = () => {
               </div>
             </BannerContent>
 
-            <BannerNavigation>
-              <a href="#favorite_section">
+            <BannerNavigation
+              onClick={(e: React.MouseEvent<HTMLButtonElement>) => e.stopPropagation()}
+            >
+              <a href="#slider_section">
                 <div>
                   <div>Explore tours</div>
                   <ArrowDown />
@@ -67,13 +70,8 @@ const HomePage = () => {
           </Banner>
         </section>
 
-        <section id="favorite_section">
-          <Banner imageUrl={imgs[currentImage]} width="100vw" height="100vh">
-            <BannerContent onClick={() => {}}>
-              <div>The space is waiting for</div>
-              <div>you</div>
-            </BannerContent>
-          </Banner>
+        <section id="slider_section">
+          <Slider />
         </section>
       </main>
     </>

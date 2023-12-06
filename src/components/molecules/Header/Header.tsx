@@ -1,7 +1,7 @@
 import Logo from '../../atoms/Logo/Logo';
 import NavButton from '../../atoms/NavButton/NavButton';
 import { NavButtonsWrapper, NavListWrapper, NavWrapper } from './Header.styles';
-import logo from '../../../assets/logos/spacex.svg';
+import logo from '../../../assets/logos/spacex.png';
 import Button from '../../atoms/Button/Button';
 import Heart from '../../../assets/images/Heart';
 import { useLocation, useNavigate } from 'react-router-dom';

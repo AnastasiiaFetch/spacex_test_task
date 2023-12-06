@@ -8,12 +8,11 @@ export const StyledButton = styled.button<{ bgcolor: string }>`
   width: 100%;
   text-wrap: nowrap;
   text-transform: uppercase;
-  padding: 0.4rem 1rem;
+  padding: 0.4rem 0.8rem;
 
   font-family: 'Syne', sans-serif;
   color: rgba(0, 0, 0, 1);
   font-weight: 600;
   font-size: 1.5rem;
-  line-height: 1.8rem;
   text-align: center;
 `;

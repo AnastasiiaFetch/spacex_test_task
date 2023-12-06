@@ -3,12 +3,12 @@ import { NavButton as Button } from './NavButton.styles';
 
 interface NavButtonProps {
   text: string;
-  navigate: string;
+  link: string;
 }
-const NavButton: React.FC<NavButtonProps> = ({ text, navigate }) => {
+const NavButton: React.FC<NavButtonProps> = ({ text, link }) => {
   return (
     <Button>
-      <Link to={navigate}>{text}</Link>
+      <Link to={link}>{text}</Link>
     </Button>
   );
 };

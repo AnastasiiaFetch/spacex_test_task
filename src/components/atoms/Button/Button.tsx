@@ -7,7 +7,11 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({ bgColor, children, onClick = () => {} }) => {
-  return <StyledButton bgColor={bgColor}>{children}</StyledButton>;
+  return (
+    <StyledButton bgColor={bgColor} onClick={onClick}>
+      {children}
+    </StyledButton>
+  );
 };
 
 export default Button;

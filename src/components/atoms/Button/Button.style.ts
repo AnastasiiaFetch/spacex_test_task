@@ -8,7 +8,7 @@ export const StyledButton = styled.button<any>`
   width: 100%;
   text-wrap: nowrap;
   text-transform: uppercase;
-  padding: 0.25rem 1.5rem;
+  padding: 0.4rem 1rem;
 
   font-family: 'Syne', sans-serif;
   color: rgba(0, 0, 0, 1);

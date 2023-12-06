@@ -8,7 +8,7 @@ type IconProps = {
 };
 
 const Heart = forwardRef(
-  ({ color = '#1E1E1E', size = 24, isSelected = false, ...rest }: IconProps, ref: any) => (
+  ({ color = 'rgba(0, 0, 0, 1)', size = 24, isSelected = false, ...rest }: IconProps, ref: any) => (
     <svg
       ref={ref}
       width={size}

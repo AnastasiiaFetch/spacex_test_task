@@ -63,7 +63,7 @@ const HomePage = () => {
               <a href="#slider_section">
                 <div>
                   <div>Explore tours</div>
-                  <ArrowDown />
+                  <ArrowDown size="30" />
                 </div>
               </a>
             </BannerNavigation>

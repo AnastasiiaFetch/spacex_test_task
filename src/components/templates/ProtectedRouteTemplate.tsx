@@ -4,7 +4,6 @@ import { Rocket } from '../../types/rocket';
 import { useRecoilState } from 'recoil';
 import { cardsState } from '../../state/atoms/cards';
 import { useEffect } from 'react';
-import { equals } from 'ramda';
 
 import img_03 from '../../assets/images/austronaut.svg';
 import img_02 from '../../assets/images/command.svg';
@@ -36,9 +35,7 @@ const ProtectedRouteTemplate: React.FC<Props> = ({ children }) => {
         photo: imgs[index % imgs.length],
       })) as Rocket[];
 
-      console.log(expandedCards);
-
-      // setCards(expandedCards);
+      setCards(expandedCards);
     }
   }, [rockets]);
 

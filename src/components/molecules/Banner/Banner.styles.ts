@@ -52,7 +52,7 @@ export const BannerNavigation = styled.div<any>`
     justify-content: center;
     align-items: center;
 
-    gap: 0.5rem;
+    gap: 0.8rem;
 
     font-family: 'Lato', sans-serif;
     color: rgba(255, 255, 255, 1);

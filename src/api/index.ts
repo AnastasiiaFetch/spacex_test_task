@@ -5,7 +5,7 @@ export const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
-export const GET_All_CARDS = gql`
+export const GET_ALL_CARDS = gql`
   query GetCards {
     rockets {
       id

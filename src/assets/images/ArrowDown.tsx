@@ -19,14 +19,14 @@ const ArrowDown = forwardRef(
     >
       <path
         d="M11.4572 25.9167V0.916672"
-        stroke="white"
+        stroke={color}
         strokeWidth="1.2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M21.4978 15.8337L11.4578 25.917L1.41617 15.8337"
-        stroke="white"
+        stroke={color}
         strokeWidth="1.2"
         strokeLinecap="round"
         strokeLinejoin="round"

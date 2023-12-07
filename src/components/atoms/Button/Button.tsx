@@ -1,7 +1,7 @@
 import { StyledButton } from './Button.style';
 
 interface ButtonProps {
-  bgColor: string;
+  bgColor?: string;
   children: React.ReactNode;
   onClick: () => void;
   addStyles?: any;

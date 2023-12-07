@@ -5,6 +5,7 @@ import loadable from '@loadable/component';
 
 const HomePage = loadable(() => import('./pages/home/HomePage'));
 const FavoritePage = loadable(() => import('./pages/favorite/FavoritePage'));
+const NotFoundPage = loadable(() => import('./pages/not-found/NotFoundPage'));
 
 const Router = () => {
   return (
@@ -16,7 +17,7 @@ const Router = () => {
         </Route>
 
         <Route path="/" element={<Navigate to="/home" />} />
-        <Route path="*" element={<>not found page</>} />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
   );

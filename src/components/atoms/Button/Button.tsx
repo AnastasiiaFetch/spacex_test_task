@@ -8,7 +8,7 @@ interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = ({
-  bgColor,
+  bgColor = 'rgb(240, 240, 240, 1)',
   children,
   onClick = () => {},
   addStyles = {},

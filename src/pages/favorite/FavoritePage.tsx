@@ -28,23 +28,20 @@ const FavoritePage = () => {
     setCards(updatedCards);
   };
 
-  const buttons = useMemo(
-    () => [
-      {
-        id: 0,
-        bgColor: 'rgba(211, 234, 255, 1)',
-        content: 'buy',
-        onClick: () => {},
-      },
-      {
-        id: 1,
-        bgColor: 'rgba(236, 236, 236, 1)',
-        content: <Trash size="20" />,
-        onClick: handleDeleteButtonClick,
-      },
-    ],
-    []
-  );
+  const buttons = [
+    {
+      id: 0,
+      bgColor: 'rgba(211, 234, 255, 1)',
+      content: 'buy',
+      onClick: () => {},
+    },
+    {
+      id: 1,
+      bgColor: 'rgba(236, 236, 236, 1)',
+      content: <Trash size="20" />,
+      onClick: handleDeleteButtonClick,
+    },
+  ];
 
   const emptyCardCount = useMemo(() => Math.max(0, 3 - selectedCards.length), [selectedCards]);
 

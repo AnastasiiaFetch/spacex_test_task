@@ -10,7 +10,7 @@ import { useMemo } from 'react';
 import Card from '../../components/molecules/Card/Card';
 import Trash from '../../assets/images/Trash';
 import { cardsState } from '../../state/atoms/cards';
-import EmptyCard from '../../components/molecules/EmptyCard/EmptyCard';
+import EmptyCard from '../../components/atoms/EmptyCard/EmptyCard';
 
 const FavoritePage = () => {
   const selectedCards = useRecoilValue(selectedCardsState);

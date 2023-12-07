@@ -13,7 +13,6 @@
     "@apollo/client": "^3.8.8",
     "@loadable/component": "^5.15.3",
     "graphql": "^16.8.1",
-    "ramda": "^0.29.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -23,7 +22,6 @@
   },
   "devDependencies": {
     "@types/loadable__component": "^5.13.8",
-    "@types/ramda": "^0.29.9",
     "@types/react": "^18.2.37",
     "@types/react-dom": "^18.2.15",
     "@types/react-helmet": "^6.1.11",

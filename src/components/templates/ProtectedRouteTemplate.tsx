@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 import img_03 from '../../assets/images/austronaut.svg';
 import img_02 from '../../assets/images/command.svg';
 import img_01 from '../../assets/images/satellite.svg';
-import { isEqual } from '../../utils/isEqual';
 
 type Props = {
   children: React.ReactNode;
@@ -24,10 +23,8 @@ const ProtectedRouteTemplate: React.FC<Props> = ({ children }) => {
   const imgs = [img_01, img_02, img_03];
   const [cards, setCards] = useRecoilState(cardsState);
 
-  const isEqualStates = isEqual(cards, rockets);
-
   useEffect(() => {
-    if (!isEqualStates && rockets && !loading) {
+    if (cards.length === 0 && rockets && !loading) {
       const expandedCards = Array.from({ length: 9 }, (_, index) => ({
         ...rockets[index % rockets.length],
         isSelected: false,

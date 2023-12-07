@@ -56,7 +56,7 @@ export const CardContentWrapper = styled.div`
 
 export const CardButtonsWrapper = styled.div`
   display: grid;
-  grid-template-columns: 4fr 1fr;
+  grid-template-columns: 6fr 1fr;
   height: fit-content;
   width: 100%;
   gap: 1.5rem;

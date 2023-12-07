@@ -1,14 +1,21 @@
 import Dot from '../../../assets/images/Dot';
+import { DotButtonsWrapper } from './DotButtons.styles';
 
 interface DotButtonsProps {
   itemsAmount: number;
   itemActive: number;
-  setActiveItem: React.Dispatch<React.SetStateAction<number>>;
+  setActiveItem: (index: number) => void;
+  [key: string]: any;
 }
 
-const DotButtons: React.FC<DotButtonsProps> = ({ itemsAmount, itemActive, setActiveItem }) => {
+const DotButtons: React.FC<DotButtonsProps> = ({
+  itemsAmount,
+  itemActive,
+  setActiveItem,
+  ...rest
+}) => {
   return (
-    <>
+    <DotButtonsWrapper>
       {Array.from({ length: itemsAmount }, (_, index) => {
         const isActive = index === itemActive;
         return (
@@ -20,10 +27,11 @@ const DotButtons: React.FC<DotButtonsProps> = ({ itemsAmount, itemActive, setAct
               e.stopPropagation();
               setActiveItem(index);
             }}
+            {...rest}
           />
         );
       })}
-    </>
+    </DotButtonsWrapper>
   );
 };
 

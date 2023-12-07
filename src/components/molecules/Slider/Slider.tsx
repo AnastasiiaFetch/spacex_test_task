@@ -11,6 +11,8 @@ import {
 } from './Slider.styles';
 import { cardsState } from '../../../state/atoms/cards';
 import { useState } from 'react';
+import Card from '../Card/Card';
+import DotButtons from '../../atoms/DotButtons/DotButtons';
 
 const Slider = () => {
   const cards = useRecoilValue(cardsState) || [];
@@ -58,10 +60,16 @@ const Slider = () => {
       </SliderNavWrapper>
 
       <SliderCardsWrapper>
-        <div style={{ background: 'red' }}>1</div>
-        <div style={{ background: 'red' }}>2</div>
-        <div style={{ background: 'red' }}>3</div>
+        {visibleCards.map(card => (
+          <Card {...card} key={card.id} />
+        ))}
       </SliderCardsWrapper>
+      <DotButtons
+        itemsAmount={3}
+        itemActive={currentCard <= 2 ? 0 : currentCard >= 3 && currentCard <= 5 ? 1 : 2}
+        setActiveItem={index => setCurrentCard(index * 3)}
+        color="black"
+      />
     </SliderWrapper>
   );
 };

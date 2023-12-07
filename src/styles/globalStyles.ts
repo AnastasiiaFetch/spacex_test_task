@@ -18,8 +18,7 @@ body {
 }
 
 section {
-  height: fit-content;
-  max-height: 100vh;
+  max-height: fit-content;
   max-width: 100vw;
   overflow: hidden;
 }

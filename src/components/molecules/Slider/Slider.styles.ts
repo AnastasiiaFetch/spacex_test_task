@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const SliderWrapper = styled.div`
-  padding: 5rem 4rem;
+  padding: 2rem 4rem;
 
   display: flex;
   flex-direction: column;

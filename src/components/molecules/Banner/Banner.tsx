@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { BannerWrapper } from './Banner.styles';
+import Loader from '../Loader/Loader';
 
 interface BannerProps {
   children: React.ReactNode;
@@ -9,16 +10,20 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ children, imageUrl, ...rest }) => {
   const [backgroundImage, setBackgroundImage] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const img = new Image();
     img.src = imageUrl;
-    img.onload = () => setBackgroundImage(img.src);
+    img.onload = () => {
+      setBackgroundImage(img.src);
+      setLoading(false);
+    };
   }, [imageUrl]);
 
   return (
     <BannerWrapper imageurl={backgroundImage} {...rest}>
-      {!backgroundImage ? <div>Loading...</div> : <>{children}</>}
+      {loading ? <Loader /> : <>{children}</>}
     </BannerWrapper>
   );
 };

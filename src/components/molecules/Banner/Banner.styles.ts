@@ -69,13 +69,6 @@ export const BannerNavigation = styled.div<any>`
 export const BannerPagination = styled.div<any>`
   position: absolute;
   z-index: 10;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  gap: 0.25rem;
   bottom: 40%;
   right: 50%;
 `;

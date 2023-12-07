@@ -5,6 +5,7 @@ export const BannerWrapper = styled.div<any>`
   transition: background-image linear 1s;
   background-size: cover;
   background-position: center;
+  background-position-y: top;
 
   display: flex;
   flex-direction: column;
@@ -20,6 +21,7 @@ export const BannerWrapper = styled.div<any>`
 
 export const BannerContent = styled.div<any>`
   position: absolute;
+  z-index: 10;
 
   font-family: 'Syne', sans-serif;
   color: rgba(255, 255, 255, 1);

@@ -4,11 +4,17 @@ interface ButtonProps {
   bgColor: string;
   children: React.ReactNode;
   onClick: () => void;
+  addStyles?: any;
 }
 
-const Button: React.FC<ButtonProps> = ({ bgColor, children, onClick = () => {} }) => {
+const Button: React.FC<ButtonProps> = ({
+  bgColor,
+  children,
+  onClick = () => {},
+  addStyles = {},
+}) => {
   return (
-    <StyledButton bgcolor={bgColor} onClick={onClick}>
+    <StyledButton bgcolor={bgColor} onClick={onClick} addstyles={addStyles}>
       {children}
     </StyledButton>
   );

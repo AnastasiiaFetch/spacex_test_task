@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet';
 import img_01 from '../../assets/images/austronaut.svg';
 import Banner from '../../components/molecules/Banner/Banner';
 import { BannerContent } from '../../components/molecules/Banner/Banner.styles';
@@ -11,17 +10,18 @@ import Card from '../../components/molecules/Card/Card';
 import Trash from '../../assets/images/Trash';
 import { cardsState } from '../../state/atoms/cards';
 import EmptyCard from '../../components/atoms/EmptyCard/EmptyCard';
+import { Helmet } from 'react-helmet-async';
 
 const FavoritePage = () => {
   const selectedCards = useRecoilValue(selectedCardsState);
   const [cards, setCards] = useRecoilState(cardsState);
 
-  const clearButtonClick = () => {
+  const handleClearButtonClick = () => {
     const updatedCards = cards.map(card => ({ ...card, isSelected: false }));
     setCards(updatedCards);
   };
 
-  const deleteButtonClick = (id: string) => {
+  const handleDeleteButtonClick = (id: string) => {
     const updatedCards = cards.map(card =>
       card.id === id ? { ...card, isSelected: false } : card
     );
@@ -40,7 +40,7 @@ const FavoritePage = () => {
         id: 1,
         bgColor: 'rgba(236, 236, 236, 1)',
         content: <Trash size="20" />,
-        onClick: deleteButtonClick,
+        onClick: handleDeleteButtonClick,
       },
     ],
     []
@@ -62,7 +62,7 @@ const FavoritePage = () => {
       <FavoriteCardsSectionWrapper>
         <Button
           bgColor="transparent"
-          onClick={clearButtonClick}
+          onClick={handleClearButtonClick}
           addStyles={{
             color: 'rgba(85, 107, 132, 1)',
             fontSize: '1.5rem',

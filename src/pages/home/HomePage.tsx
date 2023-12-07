@@ -1,4 +1,3 @@
-import { Helmet } from 'react-helmet';
 import Banner from '../../components/molecules/Banner/Banner';
 import img_03 from '../../assets/images/austronaut.svg';
 import img_02 from '../../assets/images/command.svg';
@@ -12,6 +11,7 @@ import {
 import ArrowDown from '../../assets/images/ArrowDown';
 import Slider from '../../components/molecules/Slider/Slider';
 import DotButtons from '../../components/atoms/DotButtons/DotButtons';
+import { Helmet } from 'react-helmet-async';
 
 const HomePage = () => {
   const imgs = [img_01, img_02, img_03];

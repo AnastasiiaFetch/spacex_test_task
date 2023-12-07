@@ -10,8 +10,8 @@ import {
   BannerPagination,
 } from '../../components/molecules/Banner/Banner.styles';
 import ArrowDown from '../../assets/images/ArrowDown';
-import Dot from '../../assets/images/Dot';
 import Slider from '../../components/molecules/Slider/Slider';
+import DotButtons from '../../components/atoms/DotButtons/DotButtons';
 
 const HomePage = () => {
   const imgs = [img_01, img_02, img_03];
@@ -38,20 +38,11 @@ const HomePage = () => {
               <div>The space is waiting for</div>
               <div>
                 <BannerPagination>
-                  {imgs.map((_, index) => {
-                    const isActive = index === currentImage;
-                    return (
-                      <Dot
-                        key={index}
-                        size="24"
-                        isActive={isActive}
-                        onClick={(e: React.MouseEvent<HTMLButtonElement>) => {
-                          e.stopPropagation();
-                          setCurrentImage(index);
-                        }}
-                      />
-                    );
-                  })}
+                  <DotButtons
+                    itemsAmount={imgs.length}
+                    itemActive={currentImage}
+                    setActiveItem={setCurrentImage}
+                  />
                 </BannerPagination>
                 you
               </div>
